@@ -21,9 +21,12 @@ Het opzetten en van een practicum is te zien op afbeelding 2 (meest linker scher
 ![Afbeeling 2](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide2.PNG)
 *Afbeelding 2, Aanmaken en uitvoeren van een practicum.*
 
+Het kan handig zijn om een oud practicum terug te zien. Vandaar dat je vanuit het hoofdmenu door middel van de knop 'pratica' kunt navigeren naar de oude practica. Na het drukken op deze knop, moet eerst een klas geselecteerd worden (zie afbeelding 3, meest linker scherm). Daarna vershijnt een lijst met de door deze klas gedane practica (middelste scherm). Door op een practicum te klikken, verschijnt er een lijst met leerlingen en de daarbij geregistreerde evenementen (meest rechter scherm). Door in dit scherm op een leerling te klikken, zou eventueel nog een evenement toegevoegd kunnen worden. Zo zou iemand die afwezig was tijdens het praticum, wat in het voorbeeld twee punten aftrek betekent, na het practicum ingehaald te hebben de twee punten weer terug kunnen krijgen.
 
 ![Afbeeling 3](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide3.PNG)
 *Afbeelding 3, Overzicht en inzicht practica.*
+
+Tot slot zijn er nog de leerlingen. Net als bij de practica, kan het ook bij de leerlingen handig zijn om een overzicht te kunnen zien. Door op de knop 'leerlingen' te drukken, kom je in een menuutje waar je de klas moet selecteren (zie afbeelding 4, meest rehter plaatje. Deze is heel vergelijkbaar met die van afbeelding 3). Hier kun je, door op de 'menu' knop van je android-toestel te drukken, een knop tevoorschijn halen genaamd 'klassen beheren'. Via deze weg kun je klassen toevoegen of verwijderen (niet afgebeeld). Als je op een klas drukt, krijg je een lijst met leerlingen uit die klas voor je, met het practicumcijfer dat ze op dat moment staan. In dit scherm worden onvoldoendes rood. Door in dit scherm op de 'menu' knop te drukken, verschijnt een optie om leerlingen te beheren. Hier kunnen leerlingen toegevoegd dan wel verwijderderd worden (niet afgebeeld). Als je op een leerling drukt, vershijnt een overzicht met alle geregistreerde evenementen en de berekening van het cijfer. Deze berekening berust op een bepaald startcijfer (waarover later meer), waar allerlei evenement-afhankelijke cijfer bij opgeteld/van afgetrokken worden. 
 
 ![Afbeeling 4](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide4.PNG)
 *Afbeelding 4, Overzicht en inzicht leerlingen.*
