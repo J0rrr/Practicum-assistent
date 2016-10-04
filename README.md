@@ -10,10 +10,10 @@ Wat is er belangrijk voor zo'n app? In de eerste plaats moet de app makkelijk en
 Daarnaast 
 
 ## App design
-Hieronder zal besproken worden hoe de schermem van de app er waarschijnlijk uit zullen komen te zien. 
+Hieronder zal besproken worden hoe de schermem van de app er waarschijnlijk uit zullen komen te zien, te beginnen met het hoofdmenu. Daarna zal uitgelegd worden waar alle knoppen uit het hoofdmenu naar leiden en waarom.
 
 ### Hoofdmenu
-Allereerst beginnen we met het hoofdmenu (zie afbeelding 1). Dit relatief simpele scherm is het eerste wat je te zien krijg bij het opstarten van de app. De vier knoppen van het hoofdmenu zullen hieronder een voor een doorgenomen worden. Met de eerste (bovenste) knop kan een nieuw practicum opgezet worden, de bedoeling is om dit net voor de les te doen of tijdens binnenkomst van de leerlingen. 
+Allereerst beginnen we met het hoofdmenu (zie afbeelding 1). Dit relatief simpele scherm is het eerste wat je te zien krijg bij het opstarten van de app. Met de eerste (bovenste) knop kan een nieuw practicum opgezet worden, de bedoeling is om dit net voor de les te doen of tijdens binnenkomst van de leerlingen. 
 
 
 ![Afbeelding 1](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide1%20nieuw.PNG)
