@@ -13,7 +13,7 @@ Daarnaast
 Hieronder zal besproken worden hoe de schermem van de app er waarschijnlijk uit zullen komen te zien. Allereerst beginnen we met het hoofdmenu (zie afbeelding 1). Dit relatief simpele scherm is het eerste wat je te zien krijg bij het opstarten van de app. Van hieruit kan een nieuw practicum opgezet worden, de bedoeling is om dit net voor de les te doen of tijdens binnenkomst van de leerlingen. 
 
 
-
+![Afbeelding 1, Hoofdmenu](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide1.PNG)
 Afbeelding 1, Hoofdmenu.
 
 Het opzetten en van een practicum is te zien op afbeelding 2 (meest linker scherm). Hier moet de naam van het practicum (bijvoorbeeld 'Evenwicht met katrollen') worden ingevuld, de klas worden geselecteerd en kan eventueel nog een opmerking worden toegevoegd. Door op 'maak practicum' te drukken, wordt het practicum aangemaakt en krijg je een lijst met leerlingen uit die klas te zien (middelste scherm). Bij het drukken op een leerling verschijnt een pop-up menu (meest rechter scherm), van waaruit je een aantal standaard evenementen (zoals 'goede vraag') snel kunt aanklikken. Deze evenementen representeren een standaard scoretoekenning; elke keer dat bij een leerling zo'n evenement wordt aangeklikt neemt zijn/haar cijfer met een vooraf bepaalde hoeveelheid toe of af. Bij een evenement dat niet onder de standaard evenementen valt, kan het veld 'anders' worden ingevuld en op een van de scoretoekenningen gedrukt worden. Op deze manier kunnen uitzonderlijke of onvoorziene situaties toch de boeken ingaan en becijferd worden.
