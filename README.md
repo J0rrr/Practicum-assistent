@@ -22,4 +22,10 @@ Het opzetten en van een practicum is te zien op afbeelding 2 (meest linker scher
 *Afbeelding 2, Aanmaken en uitvoeren van een practicum.*
 
 
+![Afbeeling 3](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide3.PNG)
+*Afbeelding 3, Overzicht en inzicht practica.*
+
+![Afbeeling 4](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide4.PNG)
+*Afbeelding 4, Overzicht en inzicht leerlingen.*
+
 
