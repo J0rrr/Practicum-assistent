@@ -1,5 +1,5 @@
 # Practicum-assistent
-An app that assists in the grading of the practica of high-school students
+Een app die helpt in het documenteren en becijferen van practica van middelbare scholieren.
 
 ## Introductie
 In de natuurkundelessen die ik aan middelbare scholieren geef, doen we vaak aan practica. Deze practica worden aan het eind van elk trimester beoordeeld met een cijfer, gebaseerd op hoe serieus elke leerling aan de practica heeft deelgenomen. Tegenwoordig wordt dit cijfer vastgesteld op basis van mijn geheugen en wat werk dat de leeringen inleveren. Met meerdere practica over maanden van tijd en met zo'n honderd leerlingen, voelt het becijferen af en toe helaas meer als gokwerk dan iets anders. Een app zou kunnen helpen in het documenteren van sommige evenementen (zoals slecht gedrag of goede vragen van leerlingen) tijdens de practica. Deze app zou ook een cijfer kunnen toekennen aan elke leerling aan het einde van elk trimester, en de leerlingen kunnen eindelijk een document uitgerijkt krijgen met daarop een gedetailleerd overzicht van de vaststelling van hun practicumcijfer.
