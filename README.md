@@ -1,9 +1,11 @@
 # Practicum-assistent
 An app that assists in the grading of the practica of high-school students
 
-## Introduction
-In the physis classes I give to high-school students, we often do small experiments in the form of practica. Every trimester, a grade will be given to each student based on the seriousness in which they participate these practica. Currently, this grade is derived from my memory of how the practica went, but with multiple practica over a period of months with roughly a hundred students, deciding on this grade sometimes feels like guesswork. An app could help in documenting certain events (e.g. bad behaviour or good questions from students) during practica. This app could also grade the students in the end of every trimester, and the students can finally be handed out a detailed document on what their specific grade is based on. 
+## Introductie
+In de natuurkundelessen die ik aan middelbare scholieren geef, doen we vaak aan practica. Deze practica worden aan het eind van elk trimester beoordeeld met een cijfer, gebaseerd op hoe serieus elke leerling aan de practica heeft deelgenomen. Tegenwoordig wordt dit cijfer vastgesteld op basis van mijn geheugen en wat werk dat de leeringen inleveren. Met meerdere practica over maanden van tijd en met zo'n honderd leerlingen, voelt het becijferen af en toe helaas meer als gokwerk dan iets anders. Een app zou kunnen helpen in het documenteren van sommige evenementen (zoals slecht gedrag of goede vragen van leerlingen) tijdens de practica. Deze app zou ook een cijfer kunnen toekennen aan elke leerling aan het einde van elk trimester, en de leerlingen kunnen eindelijk een document uitgerijkt krijgen met daarop een gedetailleerd overzicht van de vaststelling van hun practicumcijfer.
 
-## Requirements
-So what aspects are important for one such app? Firstly, it should be easy and quick to use. I myself, and teachers in general, do not have a lot of time during classes to fiddle with an app. Besides, it should be avoided that the teacher is 'constantly on his phone', while it is prohibited for the students to do so. So during the practica, a few buttonclicks should be enough to register certain student events.
+## Vereisten
+Wat is er belangrijk voor zo'n app? In de eerste plaats moet de app makkelijk en snel te gebruiken zijn. Ik, net als docenten in het algemeen, heb niet veel tijd tijdens de les om me met een app bezig te houden. Tijdens de les ben ik er primair om leerlingen te helpen/begeleiden. Daarnaast staat het niet zo charmant als de docent de hele tijd 'op zijn telefoon zit', terwijl dit voor de leerlingen verboden is. Tijdens de practica zou enkel een paar klikken op knoppen dus genoeg moeten zijn om bepaalde evenementen te documenteren.
+
+Daarnaast 
 
