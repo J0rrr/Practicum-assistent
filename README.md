@@ -2,10 +2,10 @@
 Een app die helpt in het documenteren en becijferen van practica van middelbare scholieren.
 
 ## Introductie
-In de natuurkundelessen die ik aan middelbare scholieren geef, doen we vaak aan practica. Deze practica worden aan het eind van elk trimester beoordeeld met een cijfer, gebaseerd op hoe serieus elke leerling aan de practica heeft deelgenomen. Tegenwoordig wordt dit cijfer vastgesteld op basis van mijn geheugen en wat werk dat de leeringen inleveren. Met meerdere practica over maanden van tijd en met zo'n honderd leerlingen, voelt het becijferen af en toe helaas meer als gokwerk dan iets anders. Een app zou kunnen helpen in het documenteren van sommige evenementen (zoals slecht gedrag of goede vragen van leerlingen) tijdens de practica. Deze app zou ook een cijfer kunnen toekennen aan elke leerling aan het einde van elk trimester, en de leerlingen kunnen eindelijk een document uitgerijkt krijgen met daarop een gedetailleerd overzicht van de vaststelling van hun practicumcijfer.
+In de natuurkundelessen die ik aan middelbare scholieren geef, doen we vaak aan practica. Deze practica worden aan het eind van elk trimester beoordeeld met een cijfer, gebaseerd op hoe serieus elke leerling aan de practica heeft deelgenomen. Tegenwoordig wordt dit cijfer vastgesteld op basis van mijn geheugen en wat werk dat de leeringen inleveren. Met meerdere practica over maanden van tijd en met zo'n honderd leerlingen, voelt het becijferen af en toe helaas meer als gokwerk dan iets anders. Een app zou kunnen helpen in het documenteren van sommige gebeurtenissen (zoals slecht gedrag of goede vragen van leerlingen) tijdens de practica. Deze app zou ook een cijfer kunnen toekennen aan elke leerling aan het einde van elk trimester, en de leerlingen kunnen eindelijk een document uitgerijkt krijgen met daarop een gedetailleerd overzicht van de vaststelling van hun practicumcijfer.
 
 ## Vereisten
-Wat is er belangrijk voor zo'n app? In de eerste plaats moet de app makkelijk en snel te gebruiken zijn. Ik, net als docenten in het algemeen, heb niet veel tijd tijdens de les om me met een app bezig te houden. Tijdens de les ben ik er primair om leerlingen te helpen/begeleiden. Daarnaast staat het niet zo charmant als de docent de hele tijd 'op zijn telefoon zit', terwijl dit voor de leerlingen verboden is. Tijdens de practica zou enkel een paar klikken op knoppen dus genoeg moeten zijn om bepaalde evenementen te documenteren.
+Wat is er belangrijk voor zo'n app? In de eerste plaats moet de app makkelijk en snel te gebruiken zijn. Ik, net als docenten in het algemeen, heb niet veel tijd tijdens de les om me met een app bezig te houden. Tijdens de les ben ik er primair om leerlingen te helpen/begeleiden. Daarnaast staat het niet zo charmant als de docent de hele tijd 'op zijn telefoon zit', terwijl dit voor de leerlingen verboden is. Tijdens de practica zou enkel een paar klikken op knoppen dus genoeg moeten zijn om bepaalde gebeurtenissen te documenteren.
 
 Daarnaast is stabiliteit en onafhankelijkheid erg belangrijk. Als de app gebruikt gaat worden om leerlingen te beoordelen, moet het altijd werken, anders zou het wel eens oneerlijk kunnen zijn ten opzichten van bepaalde leerlingen. Fatale bugs en crashes moeten dus tot een minimum beperkt worden, en de app mag niet afhankelijk zijn van bijvoorbeeld het hebben van een internetverbinding.
 
@@ -28,7 +28,6 @@ Het opzetten en van een practicum is te zien op afbeelding 2 (meest linker scher
 ![Afbeeling 2](https://github.com/J0rrr/Practicum-assistent/blob/master/Slide2.PNG)
 *Afbeelding 2, Aanmaken en uitvoeren van een practicum.*
 
-
 ### Practica
 Het kan handig zijn om een oud practicum terug te zien. Vandaar dat je vanuit het hoofdmenu door middel van de knop 'pratica' kunt navigeren naar de oude practica. Na het drukken op deze knop, moet eerst een klas geselecteerd worden (zie afbeelding 3, meest linker scherm). Daarna vershijnt een lijst met de door deze klas gedane practica (middelste scherm). Door op een practicum te klikken, verschijnt er een lijst met leerlingen en de daarbij geregistreerde evenementen (meest rechter scherm). Door in dit scherm op een leerling te klikken, zou eventueel nog een evenement toegevoegd kunnen worden. Zo zou iemand die afwezig was tijdens het praticum, wat in het voorbeeld twee punten aftrek betekent, na het practicum ingehaald te hebben de twee punten weer terug kunnen krijgen.
 
@@ -45,3 +44,12 @@ Dan zijn er nog de leerlingen. Net als bij de practica, kan het ook bij de leerl
 
 ### Start nieuwe periode
 Tot slot vinden we op het hoofdmenu nog de knop 'start nieuwe periode'. Het is de bedoeling dat bij de start van elke periode deze knop wordt ingedrukt. Nadat deze knop is ingedrukt, moet nog even bevestigd worden dat dit écht is wat je wil (er is namelijk geen weg meer terug). Daarna moet het startcijfer worden ingevoerd, dit is het cijfer waar alle leerlingen de periode mee beginnen (bijvoorbeeld een 7). Vanuit dit cijfer zullen de leerlingen punten verdienen of verliezen, afhankelijk van hun gedrag tijdens de practica. 
+
+
+# Technische details
+Nu we weten hoe de app er uit moet zien, is het tijd om te bepalen hoe we dit daadwerkelijk gaan implementeren. Het belangrijkste aan de app is het opslaan van de gegevens. Aan het einde van elk trimester is het de bedoeling dat er van deze gegevens een google sheet (vergelijkbaar met excel spreadheed) gemaakt wordt, dat verder uitgewerkt en/of uitgeprint kan worden. Deze sheet zal er als volgt uit moeten zien:
+- Voor elke klas een aparte worksheet (tabblad).
+- Elke kolom in een worksheet staat voor een leerling in de desbetreffende klas.
+- Elke rij in een worksheet staat voor een practicum met de desbetreffende klas.
+
+Op deze manier ontstaat er een matrix aan data, waarin in elke cel de gedocumenteerde gebeurtenissen van elke leerling bij elk practicum te zien zijn, met bijbehorende scoretoekenning. 
