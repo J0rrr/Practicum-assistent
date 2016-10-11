@@ -46,10 +46,17 @@ Dan zijn er nog de leerlingen. Net als bij de practica, kan het ook bij de leerl
 Tot slot vinden we op het hoofdmenu nog de knop 'start nieuwe periode'. Het is de bedoeling dat bij de start van elke periode deze knop wordt ingedrukt. Nadat deze knop is ingedrukt, moet nog even bevestigd worden dat dit écht is wat je wil (er is namelijk geen weg meer terug). Daarna moet het startcijfer worden ingevoerd, dit is het cijfer waar alle leerlingen de periode mee beginnen (bijvoorbeeld een 7). Vanuit dit cijfer zullen de leerlingen punten verdienen of verliezen, afhankelijk van hun gedrag tijdens de practica. 
 
 
-# Technische details
-Nu we weten hoe de app er uit moet zien, is het tijd om te bepalen hoe we dit daadwerkelijk gaan implementeren. Het belangrijkste aan de app is het opslaan van de gegevens. Aan het einde van elk trimester is het de bedoeling dat er van deze gegevens een google sheet (vergelijkbaar met excel spreadheed) gemaakt wordt, dat verder uitgewerkt en/of uitgeprint kan worden. Deze sheet zal er als volgt uit moeten zien:
+## Technische details
+Nu we weten hoe de app er uit moet zien, is het tijd om te bepalen hoe we dit daadwerkelijk gaan implementeren. 
+
+### Google sheets
+Het belangrijkste aan de app is het opslaan van de gegevens. Aan het einde van elk trimester is het de bedoeling dat er van deze gegevens een google sheet (vergelijkbaar met excel spreadheed) gemaakt wordt, dat verder uitgewerkt en/of uitgeprint kan worden. Deze sheet zal er als volgt uit moeten zien:
 - Voor elke klas een aparte worksheet (tabblad).
 - Elke kolom in een worksheet staat voor een leerling in de desbetreffende klas.
 - Elke rij in een worksheet staat voor een practicum met de desbetreffende klas.
 
 Op deze manier ontstaat er een matrix aan data, waarin in elke cel de gedocumenteerde gebeurtenissen van elke leerling bij elk practicum te zien zijn, met bijbehorende scoretoekenning. 
+
+Het voordeel aan het gebruik van google sheets is dat de spreadsheets automatisch in de cloud worden opgeslagen. Ze zijn dan vanuit allerlei apparaten te vinden in de google drive. Dit scheelt ontzettend veel programmeerwerk, omdat google alle netwerktaken op zich neemt. Google sheets heeft een handige API waarmee de relatief simpele handelingen die deze app moet kunnen verrichten, makkelijk geïmplementeerd kunnen worden.
+
+Omdat de app in gebruik zeer snel moet reageren, wordt tijdens het gebruik van de app (tijdens een practicum) gebruik gemaakt van de 'shared preferences'. Dit is een manier om binnen android data op te slaan, waarbij gebruik wordt gemaakt van 'key-value pairs'. Elke waarde (value) aan data wordt weggeschreven met een sleutel (key), en kan alleen weer gevonden worden met die sleutel. 
