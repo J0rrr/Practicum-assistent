@@ -20,6 +20,15 @@
         android:onClick="nieuw_practicum"/>
 
     <Button
+        android:text="@string/bekijk_practica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_bekijk_practica"
+        android:layout_below="@+id/btn_nieuw_practicum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
         android:text="@string/leerlingen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,19 +37,19 @@
         android:id="@+id/btn_leerlingen" />
 
     <Button
-        android:text="@string/start_nieuwe_periode"
+        android:text="Pas gebeurtenissen aan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_leerlingen"
         android:layout_centerHorizontal="true"
-        android:id="@+id/btn_start_nieuwe_periode" />
+        android:id="@+id/btn_gebeurtenissen" />
 
     <Button
-        android:text="@string/bekijk_practica"
+        android:text="@string/start_nieuwe_periode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_bekijk_practica"
-        android:layout_below="@+id/btn_nieuw_practicum"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/btn_gebeurtenissen"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btn_start_nieuwe_periode" />
+
 </RelativeLayout>
