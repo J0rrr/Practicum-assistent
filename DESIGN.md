@@ -5,7 +5,7 @@ In het readme bestand staat omschreven hoe de app er uit moet komen te zien. Nu 
 ## Activities
 In het 'readme' bestand zie je hoe je van scherm naar scherm kunt navigeren. Dat wil zeggen: welke knoppen je moet indrukken/handelingen je moet verrichten om van het ene naar het andere scherm te komen. Deze schermen (in android taal: 'activities') zijn echter niet altijd uniek. Soms kun je op verschillende manieren bij dezelfde of heel vergelijkbare activities komen. In afbeelding 1 is te zien hoe er tussen de activities genavigeerd kan worden. Uit de afbeelding is alleen op te maken dat je tussen bepaalde activities kunt navigeren, niet welke handeling je moet verrichten om dit te doen. Onder de afbeelding staat omschreven welke inhoud bij de activities hoort.
 
-![Afbeelding 1](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/app_hierarchie_2.PNG)
+![Afbeelding 1](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/app_hierarchie_nieuw.PNG)
 *Afbeelding 1, Activity hierarchie.*
 
 - homeActivity: Het hoofdmenu met 5 knoppen.
