@@ -12,9 +12,9 @@ In het readme bestand zie je hoe je van scherm naar scherm kunt navigeren. Dat w
 - NieuwPracticum: Scherm dat je te zien krijgt wanneer je een nieuw practicum wilt maken.
 - Practicum: Lijst met klikbare namen van leerlingen.
 - Detail: Detailoverzicht van de gebeurtenissen van één leerling tijdens één practicum.
-- klassen: Lijst met klassen met een optie om de klassen te bewerken.
+- klassen: Lijst met klassen met een optie om klassen toe te voegen/te verwijderen.
 - Practica: Lijst met practica die zijn verricht door de geselecteerde klas/leerling.
-- leerlingen: Lijst met leerlingen met een optie om leerlingen toe te voegen.
+- leerlingen: Lijst met leerlingen met een optie om leerlingen toe te voegen/te verwijderen.
 - gebeurtenissen: Lijst met de mogelijke gebeurtenissen tijdens de practica (met score). Mogelijkheid om aan te passen/toe te voegen.
 - NieuwePeriode: Scherm dat je te zien krijgt als je een nieuwe periode wilt starten.
 
