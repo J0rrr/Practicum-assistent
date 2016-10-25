@@ -30,7 +30,7 @@ Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk inv
 <img src="doc/NieuwPracticumActivity_1.png" width="200">
 </kbd>
 <kbd>
-<img src="doc/NieuwPracticumAcitvity_2.png" width="200">
+<img src="doc/NieuwPracticumActivity_2.png" width="200">
 </kbd>
 <kbd>
 <img src="doc/PracticumActivity.png" width="200">
