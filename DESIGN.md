@@ -24,16 +24,16 @@ De namen van de activities zoals ze in de code zullen worden geïmplementeerd, z
 Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk invloed op de code en er kan dus niet vroeg genoeg over nagedacht worden. Ik heb er voor gekozen om 'material design' van android aan te houden (zie https://developer.android.com/design/material/index.html). In dit relatief nieuwe design zit het 'material' thema, welke ik aan zal houden in de app. Omdat sommige elementen uit het thema alleen werken vanaf android API level 21 of hoger, kies ik er voor om android API 21 als 'target' aan te houden. De app zal dus te gebruiken zijn door telefoons vanaf android API 21 (android 5.0 Lollipop). Met deze stijlkeuze komen de Home-, NieuwPracticum- en PracticumActivities er als volgt uit te zien:
 
 <kbd>
-  <img src="https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111536.png" width="200">
+  <img src="doc/Screenshot_20161025-111536.png" width="200">
 </kbd>
 <kbd>
-<img src="https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111532.png" width="200">
+<img src="doc/Screenshot_20161025-111532.png" width="200">
 </kbd>
 <kbd>
-<img src="https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111513.png" width="200">
+<img src="doc/Screenshot_20161025-111513.png" width="200">
 </kbd>
 <kbd>
-<img src="https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111520.png" width="200">
+<img src="doc/Screenshot_20161025-111520.png" width="200">
 </kbd>
 *Afbeelding 2a, 2b, 2c, 2d, Uiterlijk van drie activities (HomeActivity, NieuwPracticumActivity en PracticumActivity).*
 
@@ -46,5 +46,5 @@ Het opslaan van alle gebeurtenissen is de belangrijkste functie van de app. Het 
 
 
 
-![Afbeelding x](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/spreadsheet output.PNG)
+![Afbeelding x](doc/spreadsheet output.PNG)
 *Afbeelding x, Spreadsheet output.*
