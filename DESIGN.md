@@ -20,6 +20,11 @@ In het readme bestand zie je hoe je van scherm naar scherm kunt navigeren. Dat w
 
 De namen van de activities zoals ze in de code zullen worden geïmplementeerd, zijn de bovenstaande namen + 'Activity.java'. Dus 'Home' heet in de code 'HomeActivity.java', het bijbehordende layout-bestand zal 'layout_home.xml' heten. Dit naar android standaarden.
 
+## Stijl
+Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk invloed op de code en er kan dus niet vroeg genoeg over nagedacht worden. Ik heb er voor gekozen om 'material design' van android aan te houden (zie https://developer.android.com/design/material/index.html). In dit relatief nieuwe design zit de 'material theme', welke ik aan zal houden in de app. Omdat sommige elementen uit de theme alleen werken vanaf android API level 21 of hoger, kies ik er dan ook voor om android API 21 als 'target' aan te houden. De app zal dus te gebruiken zijn door telefoons vanaf android API 21 (android 5.0 Lollipop). Met deze stijlkeuze komen de Home-, NieuwPracticum- en PracticumActivities er als volgt uit te zien:
+![Afbeelding 2](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111513.png)
+![](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111520.png)
+
 ## Data opslag
 Het opslaan van alle gebeurtenissen is de belangrijkste functie van de app. Het is dan ook zaak dat dit op een goede en veilige manier gebeurt. De datastructuur is niet ingewikkeld, een tabel is voldoende per klas per periode. De kolommen ('x') van de tabel staan dan voor leerlingen, de rijen ('y') voor practica en de velden worden gevuld met de gebeurtenissen van leerling x tijden practicum y. Zie afbeelding x voor een voorbeeld van zo'n tabel. 
 
