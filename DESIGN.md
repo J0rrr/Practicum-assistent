@@ -51,13 +51,13 @@ Het zou zonde zijn als alle gedocumenteerde gebeurtenissen alleen op de telefoon
 ![Afbeelding 3](doc/spreadsheet output.PNG)
 *Afbeelding 3, Spreadsheet output.*
 
-![Afbeelding 4](doc/pad_nieuw_practicum.PNG)
+![Afbeelding 4](doc/pad_nieuw_practicum.png)
 *Afbeelding 4, Technische details bij het maken van een nieuw practicum.*
 
-![Afbeelding 5](doc/pad_bekijk_practica.PNG)
+![Afbeelding 5](doc/pad_bekijk_practica.png)
 *Afbeelding 5, Technische details bij het bekijken/aanpassen van een oud practicum.*
 
-![Afbeelding 6](doc/pad_leerlingen.PNG)
+![Afbeelding 6](doc/pad_leerlingen.png)
 *Afbeelding 6, Technische details bij het bekijken/aanpassen van leerlingen.*
 
 
