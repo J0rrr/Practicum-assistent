@@ -41,10 +41,12 @@ De kleuren kunnen binnen dit thema heel makkelijk aangepast worden (in een , wat
 
 
 ## Data opslag
-Het opslaan van alle gebeurtenissen is de belangrijkste functie van de app. Het is dan ook zaak dat dit op een goede en veilige manier gebeurt. De datastructuur is niet ingewikkeld, een tabel is voldoende per klas per periode. De kolommen ('x') van de tabel staan dan voor leerlingen, de rijen ('y') voor practica en de velden worden gevuld met de gebeurtenissen van leerling x tijden practicum y. Zie afbeelding x voor een voorbeeld van zo'n tabel. 
+Het opslaan van alle gebeurtenissen is de belangrijkste functie van de app. Het is dan ook zaak dat dit op een goede en veilige manier gebeurt. De datastructuur is niet ingewikkeld, een tabel is voldoende per klas per periode. De kolommen ('x') van de tabel staan dan voor leerlingen, de rijen ('y') voor practica en de velden worden gevuld met de gebeurtenissen van leerling x tijden practicum y. Zie afbeelding 3 voor een voorbeeld van zo'n tabel.
 
+Voor het daadwerkelijk opslaan van de data zal gebruik gemaakt worden van SQLite. Dit relationele database management system zit standaard in android ingebakken. Met SQLite kan de app vrij gemakkelijk alle data en de onderlinge relaties daartussen kwijt in één bestand dat op het apparaat blijft staan, zelfs als het wordt uitgeschakeld.
 
+## Data output
+Het zou zonde zijn als alle gedocumenteerde gebeurtenissen alleen op de telefoon blijven staan, zonder dat er iets mee gebeurt. Want naast het documenteren van gebeurtenissen en toekennen van score aan leerlingen, is het ook wenselijk dat de leerlingen hier iets van terugzien, zodat ze zelf weten wat goed gaat/wat beter kan. Er moet dus een manier komen om de data op de pc te krijgen, waarna het bewerkt en uitgeprint/digitaal uitgereikt kan worden. Door de vorm van de data (tabellen per klas per periode), ligt een spreadheet voor de hand. Het gebruik van Google sheets heeft als voordeel dat de sheets automatisch naar de cloud worden gesynchroniseerd (namelijk je google drive). Gelukkig heeft Google sheets een uitgebreide API (https://developers.google.com/sheets/), waardoor bovenstaande plan prima uitgevoerd kan worden. Afhankelijk van de snelheid van het genereren/updaten van een sheet, moet nog worden besloten of dit 'realtime' zal gebeuren (bijvoorbeeld elke keer dat de SQLite database update), of dat er een extra knop in het hoofdmenu komt waarmee de Google sheet geupdate/aangemaakt wordt. Zie afbeelding 3 voor een voorbeeld van zo'n sheet (geopend in Excel).
 
-
-![Afbeelding x](doc/spreadsheet output.PNG)
-*Afbeelding x, Spreadsheet output.*
+![Afbeelding 3](doc/spreadsheet output.PNG)
+*Afbeelding 3, Spreadsheet output.*
