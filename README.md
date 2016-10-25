@@ -29,7 +29,7 @@ Het opzetten en van een practicum is te zien op afbeelding 2 (meest linker scher
 *Afbeelding 2, Aanmaken en uitvoeren van een practicum.*
 
 ### Practica
-Het kan handig zijn om een oud practicum terug te zien. Vandaar dat je vanuit het hoofdmenu door middel van de knop 'pratica' kunt navigeren naar de oude practica. Na het drukken op deze knop, moet eerst een klas geselecteerd worden (zie afbeelding 3, meest linker scherm). Daarna vershijnt een lijst met de door deze klas gedane practica (middelste scherm). Door op een practicum te klikken, verschijnt er een lijst met leerlingen en de daarbij geregistreerde evenementen (meest rechter scherm). Door in dit scherm op een leerling te klikken, zou eventueel nog een evenement toegevoegd kunnen worden. Zo zou iemand die afwezig was tijdens het praticum, wat in het voorbeeld twee punten aftrek betekent, na het practicum ingehaald te hebben de twee punten weer terug kunnen krijgen.
+Het kan handig zijn om een oud practicum terug te zien. Vandaar dat je vanuit het hoofdmenu door middel van de knop 'pratica' kunt navigeren naar de oude practica. Na het drukken op deze knop, moet eerst een klas geselecteerd worden (zie afbeelding 3, meest linker scherm). Daarna vershijnt een lijst met de door deze klas gedane practica (middelste scherm). Door op een practicum te klikken, verschijnt er een lijst met leerlingen en de daarbij geregistreerde gebeurtenissen (meest rechter scherm). Door in dit scherm op een leerling te klikken, zou eventueel nog een gebeurtenis toegevoegd kunnen worden. Zo zou iemand die afwezig was tijdens het praticum, wat in het voorbeeld twee punten aftrek betekent, na het practicum ingehaald te hebben de twee punten weer terug kunnen krijgen.
 
 ![Afbeeling 3](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Slide3.PNG)
 *Afbeelding 3, Overzicht en inzicht practica.*
@@ -43,7 +43,13 @@ Dan zijn er nog de leerlingen. Net als bij de practica, kan het ook bij de leerl
 
 
 ### Start nieuwe periode
-Tot slot vinden we op het hoofdmenu nog de knop 'start nieuwe periode'. Het is de bedoeling dat bij de start van elke periode deze knop wordt ingedrukt. Nadat deze knop is ingedrukt, moet nog even bevestigd worden dat dit écht is wat je wil (er is namelijk geen weg meer terug). Daarna moet het startcijfer worden ingevoerd, dit is het cijfer waar alle leerlingen de periode mee beginnen (bijvoorbeeld een 7). Vanuit dit cijfer zullen de leerlingen punten verdienen of verliezen, afhankelijk van hun gedrag tijdens de practica. 
+Tot slot vinden we op het hoofdmenu nog de knop 'start nieuwe periode'. Het is de bedoeling dat bij de start van elke periode deze knop wordt ingedrukt. Nadat deze knop is ingedrukt, moet nog even bevestigd worden dat dit écht is wat je wil (er is namelijk geen weg meer terug). Daarna moet het startcijfer worden ingevoerd, dit is het cijfer waar alle leerlingen de periode mee beginnen (bijvoorbeeld een 7). Vanuit dit cijfer zullen de leerlingen punten verdienen of verliezen, afhankelijk van hun gedrag tijdens de practica.
+
+
+### Bewerk gebeurtenissen
+De vier hierboven beschreven knoppen en de daarbij horende functies behoren tot het 'minimal viable product'. Dat wil zeggen, de app kan zijn functie goed vervullen met alles wat hiervoor omschreven is. Er is echter iets wat nog verbetering behoeft, namelijk dat de gebeurtenissen waar je tijdens het practicum uit kunt kiezen, voorgeprogrammeerd zijn. Voor mezelf is dit geen probleem, ik weet namelijk goed op welke elementen ik mijn eigen practica wil beoordelen, maar echt professioneel is de app er niet door. Met deze vrij specifieke gebeurtenis-knoppen, weten mijn collega's zich mischien geen raad. Vandaar dat het mooi zou zijn als er een optie is voor elke gebruiker om vanuit de app zelf deze gebeurtenissen in te programmeren. 
+
+Dit brengt me bij een eventuele vijfde knop genaamd: 'Bewerk gebeurtenissen'. De knop brengt je naar een scherm waar je zelf gebeurtenissen kunt maken, bewerken en verwijderen, samen met de bijbehorende scoretoekenning. Het aantal gebeurtenissen dat je tegelijk kunt hebben zal waarschijnlijk beperkt moeten tot een bepaald maximum (een stuk of zes), omdat ze allemaal als knoppen in een popup-window moeten passen (zie afbeelding 2, helemaal rechts). Desalniettemin zou het een mooie uitbreiding van het project zijn om deze extra functionaliteit toe te voegen, zodat de app te gebruiken is door een breder publiek.
 
 
 ## Technische details
