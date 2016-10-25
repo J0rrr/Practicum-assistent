@@ -5,7 +5,7 @@ In het readme bestand staat omschreven hoe de app er uit moet komen te zien. Nu 
 ## Activities
 In het readme bestand zie je hoe je van scherm naar scherm kunt navigeren. Dat wil zeggen: welke knoppen je moet indrukken/handelingen je moet verrichten om van het ene naar het andere scherm te komen. Deze schermen (in android taal: 'activities') zijn echter niet altijd uniek. Soms kun je op verschillende manieren bij dezelfde of heel vergelijkbare activities komen. In afbeelding 1 is te zien hoe er tussen de activities genavigeerd kan worden. De zwartomrande blokken zijn activities, de gekleurde pijlen geven aan welke 'paden' je door activities je kunt nemen. Bij de gekleurde lijnen staat ook (in de bijbehorende kleur) waar je op moet drukken om van activity naar activity te gaan. Hierbij geven aanhalingstekens aan dat het om een knop (met die tekst erop) gaat. Onder de afbeelding staat omschreven welke inhoud bij de activities hoort.
 
-![Afbeelding 1](https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Activity%20hierarchie.png)
+![Afbeelding 1](doc/Activity%20hierarchie.png)
 *Afbeelding 1, Activity hierarchie.*
 
 - Home: Het hoofdmenu met 5 knoppen.
@@ -36,6 +36,8 @@ Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk inv
 <img src="https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111520.png" width="200">
 </kbd>
 *Afbeelding 2a, 2b, 2c, 2d, Uiterlijk van drie activities (HomeActivity, NieuwPracticumActivity en PracticumActivity).*
+
+De kleuren kunnen binnen dit thema heel makkelijk aangepast worden (in een , wat betekent dat daar nog geen keuze in gemaakt hoeft te worden. 
 
 
 ## Data opslag
