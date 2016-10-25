@@ -35,7 +35,7 @@ Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk inv
 <kbd>
 <img src="https://github.com/J0rrr/Practicum-assistent/blob/master/doc/Screenshot_20161025-111520.png" width="200">
 </kbd>
-*Afbeelding 2a, 2b, 2c, 2d, Uiterlijk van drie activities.*
+*Afbeelding 2a, 2b, 2c, 2d, Uiterlijk van drie activities (HomeActivity, NieuwPracticumActivity en PracticumActivity).*
 
 
 ## Data opslag
