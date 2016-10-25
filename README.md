@@ -47,16 +47,4 @@ Tot slot vinden we op het hoofdmenu nog de knop 'start nieuwe periode'. Het is d
 
 
 ## Technische details
-Nu we weten hoe de app er uit moet zien, is het tijd om te bepalen hoe we dit daadwerkelijk gaan implementeren. 
-
-### Google sheets
-Het belangrijkste aan de app is het opslaan van de gegevens. Aan het einde van elk trimester is het de bedoeling dat er van deze gegevens een google sheet (vergelijkbaar met excel spreadheed) gemaakt wordt, dat verder uitgewerkt en/of uitgeprint kan worden. Deze sheet zal er als volgt uit moeten zien:
-- Voor elke klas een aparte worksheet (tabblad).
-- Elke kolom in een worksheet staat voor een leerling in de desbetreffende klas.
-- Elke rij in een worksheet staat voor een practicum met de desbetreffende klas.
-
-Op deze manier ontstaat er een matrix aan data, waarin in elke cel de gedocumenteerde gebeurtenissen van elke leerling bij elk practicum te zien zijn, met bijbehorende scoretoekenning. 
-
-Het voordeel aan het gebruik van google sheets is dat de spreadsheets automatisch in de cloud worden opgeslagen. Ze zijn dan vanuit allerlei apparaten te vinden in de google drive. Dit scheelt ontzettend veel programmeerwerk, omdat google alle netwerktaken op zich neemt. Google sheets heeft een handige API waarmee de relatief simpele handelingen die deze app moet kunnen verrichten, makkelijk geïmplementeerd kunnen worden.
-
-Omdat de app in gebruik zeer snel moet reageren, wordt tijdens het gebruik van de app (tijdens een practicum) gebruik gemaakt van de 'shared preferences'. Dit is een manier om binnen android data op te slaan, waarbij gebruik wordt gemaakt van 'key-value pairs'. Elke waarde (value) aan data wordt weggeschreven met een sleutel (key), en kan alleen weer gevonden worden met die sleutel. 
+Nu we weten hoe de app er uit moet zien, is het tijd om te bepalen hoe we dit daadwerkelijk gaan implementeren. Dit wordt beschreven in een ander documentje, genaamd 'DESIGN.md', ook te vinden in deze repository.
