@@ -82,7 +82,8 @@ Over het toevoegen van klassen en leerlingen is nog niks gezegd. Ook staan deze 
 
 
 <kbd>
-<img src="doc/LeerlingenActivity.png" width="300">
+<img src="doc/LeerlingenActivity.png" width="200">
 </kbd>
+
 *Afbeelding 7, LeerlingenActivity met 'floating action button'.*
 
