@@ -2,6 +2,7 @@
 
 In het readme bestand staat omschreven hoe de app er uit moet komen te zien. Nu dat bekend is, is het tijd om te kijken naar hoe dit daadwerkelijk geïmplementeerd gaat worden. Dat zal beschreven worden in dit document, het 'design document'.
 
+
 ## Activities
 In het readme bestand zie je hoe je van scherm naar scherm kunt navigeren. Dat wil zeggen: welke knoppen je moet indrukken/handelingen je moet verrichten om van het ene naar het andere scherm te komen. Deze schermen (in android taal: 'activities') zijn echter niet altijd uniek. Soms kun je op verschillende manieren bij dezelfde of heel vergelijkbare activities komen. In afbeelding 1 is te zien hoe er tussen de activities genavigeerd kan worden. De zwartomrande blokken zijn activities, de gekleurde pijlen geven aan welke 'paden' je door activities je kunt nemen. Bij de gekleurde lijnen staat ook (in de bijbehorende kleur) waar je op moet drukken om van activity naar activity te gaan. Hierbij geven aanhalingstekens aan dat het om een knop (met die tekst erop) gaat. Onder de afbeelding staat omschreven welke inhoud bij de activities hoort.
 
@@ -19,6 +20,7 @@ In het readme bestand zie je hoe je van scherm naar scherm kunt navigeren. Dat w
 - NieuwePeriode: Scherm dat je te zien krijgt als je een nieuwe periode wilt starten.
 
 De namen van de activities zoals ze in de code zullen worden geïmplementeerd, zijn de bovenstaande namen + 'Activity.java'. Dus 'Home' heet in de code 'HomeActivity.java', het bijbehordende layout-bestand zal 'layout_home.xml' heten. Dit naar android standaarden.
+
 
 ## Stijl
 Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk invloed op de code en er kan dus niet vroeg genoeg over nagedacht worden. Ik heb er voor gekozen om 'material design' van android aan te houden (zie https://developer.android.com/design/material/index.html). In dit relatief nieuwe design zit het 'material' thema, welke ik aan zal houden in de app. Omdat sommige elementen uit het thema alleen werken vanaf android API level 21 of hoger, kies ik er voor om android API 21 als 'target' aan te houden. De app zal dus te gebruiken zijn door telefoons vanaf android API 21 (android 5.0 Lollipop). Met deze stijlkeuze komen de Home-, NieuwPracticum- en PracticumActivities er als volgt uit te zien:
@@ -40,16 +42,19 @@ Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk inv
 De kleuren kunnen binnen dit thema heel makkelijk aangepast worden (in een resource file), wat betekent dat daar nog geen keuze in gemaakt hoeft te worden. Dat het gaat veranderen staat wel al vast, dit zwarte is naar mijn mening te zakelijk/saai.
 
 
+
 ## Data opslag
 Het opslaan van alle gebeurtenissen is de belangrijkste functie van de app. Het is dan ook zaak dat dit op een goede en veilige manier gebeurt. De datastructuur is niet ingewikkeld, een tabel is voldoende per klas per periode. De kolommen ('x') van de tabel staan dan voor leerlingen, de rijen ('y') voor practica en de velden worden gevuld met de gebeurtenissen van leerling x tijden practicum y. Zie afbeelding 3 voor een voorbeeld van zo'n tabel.
 
 Voor het daadwerkelijk opslaan van de data zal gebruik gemaakt worden van SQLite. Dit relationele database management system zit standaard in android ingebakken. Met SQLite kan de app vrij gemakkelijk alle data en de onderlinge relaties daartussen kwijt in één bestand dat op het apparaat blijft staan, zelfs als het wordt uitgeschakeld.
+
 
 ## Data output
 Het zou zonde zijn als alle gedocumenteerde gebeurtenissen alleen op de telefoon blijven staan, zonder dat er iets mee gebeurt. Want naast het documenteren van gebeurtenissen en toekennen van score aan leerlingen, is het ook wenselijk dat de leerlingen hier iets van terugzien, zodat ze zelf weten wat goed gaat/wat beter kan. Er moet dus een manier komen om de data op de pc te krijgen, waarna het bewerkt en uitgeprint/digitaal uitgereikt kan worden. Door de vorm van de data (tabellen per klas per periode), ligt een spreadheet voor de hand. Het gebruik van Google sheets heeft als voordeel dat de sheets automatisch naar de cloud worden gesynchroniseerd (namelijk je google drive). Gelukkig heeft Google sheets een uitgebreide API (https://developers.google.com/sheets/), waardoor bovenstaande plan prima uitgevoerd kan worden. Afhankelijk van de snelheid van het genereren/updaten van een sheet, moet nog worden besloten of dit 'realtime' zal gebeuren (bijvoorbeeld elke keer dat de SQLite database update), of dat er een extra knop in het hoofdmenu komt waarmee de Google sheet geupdate/aangemaakt wordt. Zie afbeelding 3 voor een voorbeeld van zo'n sheet (geopend in Excel).
 
 ![Afbeelding 3](doc/spreadsheet output.PNG)
 *Afbeelding 3, Spreadsheet output.*
+
 
 ## Technische details bij het navigeren door de app
 In afbeelding 1 van dit document is te zien van welke activities je bij welke activities kunt komen. De afbeelding geeft een redelijk overzicht, maar is niet compleet in termen van wat er gebeurt tussen de verschillende activities. In de onderstaande afbeeldingen (afbeelding 4 t/m 6) wordt ingezoomd op de bovenste drie 'bewandelbare routes' door de app, namelijk het maken van een nieuw practicum, het bekijken van oude practica en het bekijken van leerlingen. De kleuren van de routes (oranje, blauw en groen) komen overeen met de kleuren in afbeelding 1, zodat het goed te zien is hoe de routes zich verhouden in het grotere geheel. 
@@ -71,6 +76,9 @@ De derde, 'groene' route, laat zien hoe je via een beetje een andere weg op hetz
 
 ![Afbeelding 6](doc/pad_leerlingen.png)
 *Afbeelding 6, Technische details bij het bekijken/aanpassen van leerlingen.*
+
+### Klassen en leerlingen toevoegen/verwijderen
+Over het toevoegen van klassen en leerlingen is nog niks gezegd. Ook staan deze opties niet afgebeeld in afbeelding 4 t/m 6, om de plaatjes niet nog onoverzichtelijker te maken. Het idee is als volgt: in KlassenActivity (lijst met klassen) en LeerlingenActivity (lijst met Leerlingen) komt rechtsonderin een zogeheten 'floating action button'. Dit kleine ronde knopje (zie afbeelding 7) zorgt er voor dat er een knopje achter elk item in de lijst komt, om dat item te verwijderen (dus een klas of een leerling). Natuurlijk vraagt de app nog wel even om te bevestigen, omdat er data wordt verwijderd. Ook komt er onderin het scherm een optie om een item (dus klas of leerling) toe te voegen. Al deze handelingen hebben natuurlijk gevolgen voor de database, die moeten netjes verwerkt worden. Het is nog maar even de vraag of dit idee, dus het verschijnen van de toevoeg/verwijder opties, handig in dezelfde acitivity kan, of dat het makkelijker is om een compleet nieuwe activity te openen waar die knoppen al in zitten. Wat meer onderzoek op dit gebied is nodig.
 
 
 
