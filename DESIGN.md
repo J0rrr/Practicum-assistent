@@ -60,8 +60,14 @@ Wil je een nieuw practicum aanmaken, dan druk je op de eerste knop op het hoofdm
 ![Afbeelding 4](doc/pad_nieuw_practicum.png)
 *Afbeelding 4, Technische details bij het maken van een nieuw practicum.*
 
+### Bekijk practica
+De tweede knop van het hoofdmenu, "bekijk practica", leidt naar het pad dat te zien is in afbeelding 5. Het einde ervan (PracticumActivity, DetailsActivity en de popup window) zijn identiek aan het maken van een nieuw practicum (zie afbeelding 4). Het begin is echter anders. Zodra de gebruiker op "bekijk practica" drukt, moet er iets uit de database gehaald worden, namelijk de namen van de klassen die de huidige periode practica gedaan hebben. Deze worden in een lijst op het scherm weergegeven. Drukt de gebruiker op een klas uit de lijst, dan wordt die klas als extra doorgestuurd naar de volgende activity (PracticaActivity, niet te verwaren met PracticumActivity). In deze activity worden voor de zojuist doorgestuurde klas alle gedane practica met datums weergegeven. Deze informatie zal natuurlijk uit de database gehaald moeten worden. Drukt de gebruiker nu op zo'n practicum, dan opent zich PracticumActivity op een vergelijkbare manier als hierboven beschreven, met als enige verschil dat er nu al een database entry bestaat van dit practicum. Nu moeten dus niet alleen de leerlingen, maar ook de de gebeurtenissen bij de leerlingen geladen en weergegeven worden. Er zal een functie gemaakt worden, genaamd "updatePracticum", die dit werk verricht. Deze functie zal worden aangeroepen elke keer als men via de hierboven beschreven manier bij PracticumActivity terecht komt, of wanneer met uit de popup-window op een gebeurtenis drukt. De rest van de 'blauwe route' staat hierboven beschreven, onder het kopje "Nieuw Practicum".
+
 ![Afbeelding 5](doc/pad_bekijk_practica.png)
 *Afbeelding 5, Technische details bij het bekijken/aanpassen van een oud practicum.*
+
+### Leerlingen
+De derde, 'groene' route, laat zien hoe je via een beetje een andere weg op hetzelfde uit kunt komen als in de bovenstaande 'blauwe' route. Deze keer selecteer je niet een practicum om tot een lijst met leerlingen en hun gebeurtenissen te komen, maar selecteer je een leerling om tot een lijst met gedane practica en gebeurtenissen te komen (zie afbeelding 6, vergelijk met afbeelding 5). Voor een docent is deze alternatieve route erg handig, als een specifieke leerling tussentijds om een overzichtje vraagt bijvoorbeeld. In de code heeft de route grote gelijkenis met de blauwe "bekijk practica" route. Het technische verhaal is dan ook hetzelfde, met als enige verschil dat het blauwe PracticaActivity (lijst met practica) nu LeerlingenActivity is (lijst met leerlingen), en dat het blauwe PracticumActivity (lijst met leerlingen + gebeurtenissen) nu PracticaActivity (lijst met practica + gebeurtenissen) is.
 
 ![Afbeelding 6](doc/pad_leerlingen.png)
 *Afbeelding 6, Technische details bij het bekijken/aanpassen van leerlingen.*
