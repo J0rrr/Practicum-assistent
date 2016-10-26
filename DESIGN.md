@@ -81,6 +81,8 @@ De derde, 'groene' route, laat zien hoe je via een beetje een andere weg op hetz
 Over het toevoegen van klassen en leerlingen is nog niks gezegd. Ook staan deze opties niet afgebeeld in afbeelding 4 t/m 6, om de plaatjes niet nog onoverzichtelijker te maken. Het idee is als volgt: in KlassenActivity (lijst met klassen) en LeerlingenActivity (lijst met Leerlingen) komt rechtsonderin een zogeheten 'floating action button'. Dit kleine ronde knopje (zie afbeelding 7) zorgt er voor dat er een knopje achter elk item in de lijst komt, om dat item te verwijderen (dus een klas of een leerling). Natuurlijk vraagt de app nog wel even om te bevestigen, omdat er data wordt verwijderd. Ook komt er onderin het scherm een optie om een item (dus klas of leerling) toe te voegen. Al deze handelingen hebben natuurlijk gevolgen voor de database, die moeten netjes verwerkt worden. Het is nog maar even de vraag of dit idee, dus het verschijnen van de toevoeg/verwijder opties, handig in dezelfde acitivity kan, of dat het makkelijker is om een compleet nieuwe activity te openen waar die knoppen al in zitten. Wat meer onderzoek op dit gebied is nodig.
 
 
-![Afbeelding 7](doc/LeerlingenActivity.png)
+<kbd>
+<img src="doc/LeerlingenActivity.png" width="300">
+</kbd>
 *Afbeelding 7, LeerlingenActivity met 'floating action button'.*
 
