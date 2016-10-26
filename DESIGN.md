@@ -39,7 +39,7 @@ Stijl lijkt misschien niet zo'n belangrijk punt, maar het heeft wel degelijk inv
 </kbd>
 *Afbeelding 2a, 2b, 2c, 2d, Uiterlijk van drie activities (HomeActivity, NieuwPracticumActivity en PracticumActivity).*
 
-De kleuren kunnen binnen dit thema heel makkelijk aangepast worden (in een resource file), wat betekent dat daar nog geen keuze in gemaakt hoeft te worden. Dat het gaat veranderen staat wel al vast, dit zwarte is naar mijn mening te zakelijk/saai.
+De kleuren kunnen binnen dit thema heel makkelijk aangepast worden (in een resource file), wat betekent dat daar nog geen keuze in gemaakt hoeft te worden. Dat het gaat veranderen staat wel al vast, dit zwarte is naar mijn mening te zakelijk/saai en past niet helemaal binnen de google material richtlijnen.
 
 
 
