@@ -92,4 +92,4 @@ Over het toevoegen van klassen en leerlingen is nog niks gezegd. Ook staan deze 
 Voordat ik me op het gros van het programmeerwerk ga storten, moet er nog naar een aantal dingen gekeken worden.
 - Bewerken van klassen en leerlingen in een aparte activity ja/nee? Zie het alineaatje hierboven.
 - Hoe gaat een database met SQLite nu precies in z'n werk? Kan ik mijn telefoon makkelijk en veilig rooten zodat ik bij het .db bestand kan komen (vanuit het virtual device werken gaat een stuk trager).
-- experimenteren met het aanmaken en bewerken van google sheet bestanden, om uit te vinden of dit een beetje snel gaat (op zich kan dit ook best tijdens het programmeren).
+- Experimenteren met het aanmaken en bewerken van google sheet bestanden, om uit te vinden of dit een beetje snel gaat (op zich kan dit ook best tijdens het programmeren).
