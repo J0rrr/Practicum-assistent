@@ -26,6 +26,9 @@ public class NieuwPracticumActivity extends Activity implements AdapterView.OnIt
         setContentView(R.layout.activity_nieuw_practicum);
         setTitle("Nieuw Practicum");
 
+        getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         maak_button = (Button) findViewById(R.id.maak_button);
         maak_button.setEnabled(false);
 
