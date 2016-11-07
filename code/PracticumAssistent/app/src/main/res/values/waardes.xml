@@ -26,7 +26,51 @@
         <item> Leerling 23 </item>
         <item> Leerling 24 </item>
         <item> Leerling 25 </item>
+    </string-array>
 
+    <string-array name="klassen">
+        <item> 3A </item>
+        <item> 3B </item>
+        <item> 3C </item>
+        <item> 3D </item>
+        <item> 3E </item>
+        <item> 4A </item>
+        <item> 4B </item>
+        <item> 4C </item>
+        <item> 5A </item>
+        <item> 5B </item>
+        <item> 5C </item>
+        <item> 6A </item>
+        <item> 6B </item>
+
+    </string-array>
+
+    <string-array name="practica">
+        <item> Uitrekken van een veer </item>
+        <item> Zwaartepunt vinden </item>
+        <item> Katrollen 1 </item>
+        <item> Katrollen 2 </item>
+        <item> Lichtbeelden 1 </item>
+        <item> Lichtbeelden 2 </item>
+        <item> Fotopracticum </item>
+        <item> Hefboomlat </item>
+        <item> Practicum 9 </item>
+        <item> Practicum 10 </item>
+        <item> Practicum 11 </item>
+        <item> Practicum 12 </item>
+        <item> Practicum 13 </item>
+        <item> Practicum 14 </item>
+        <item> Practicum 15 </item>
+        <item> Practicum 16 </item>
+        <item> Practicum 17 </item>
+        <item> Practicum 18 </item>
+        <item> Practicum 19 </item>
+        <item> Practicum 20 </item>
+        <item> Practicum 21 </item>
+        <item> Practicum 22 </item>
+        <item> Practicum 23 </item>
+        <item> Practicum 24 </item>
+        <item> Practicum 25 </item>
     </string-array>
 
 

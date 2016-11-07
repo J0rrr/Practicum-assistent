@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".NieuwPracticumActivity" />
-        <activity android:name=".PracticumActivity"></activity>
+        <activity android:name=".PracticumActivity" />
     </application>
 
 </manifest>

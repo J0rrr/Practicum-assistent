@@ -4,4 +4,5 @@
     <string name="leerlingen">Leerlingen</string>
     <string name="start_nieuwe_periode">Start nieuwe periode</string>
     <string name="bekijk_practica">Bekijk practica</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>

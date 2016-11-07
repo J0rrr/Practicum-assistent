@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:title="Leerlingen"
         android:id="@+id/action_leerlingen"
-        android:showAsAction="ifRoom"
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_leerlingen"
         android:onClick="onClickLeerlingen"
         android:orderInCategory="100" />
     <item
         android:title="Nieuw Practicum"
         android:id="@+id/action_nieuw_practicum"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:icon="@drawable/ic_nieuw_practicum"
         android:onClick="onClickNieuwPracticum"
         android:orderInCategory="200" />
     <item
         android:title="Nieuwe Periode"
         android:id="@+id/action_nieuwe_periode"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:onClick="onClickNieuwePeriode"
         android:orderInCategory="900" />
     <item
         android:title="info"
         android:id="@+id/action_title"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:icon="@drawable/ic_action_info"
         android:onClick="onClickInfo"
         android:orderInCategory="1000" />

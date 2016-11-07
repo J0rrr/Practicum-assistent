@@ -47,11 +47,4 @@
         android:ems="10"
         android:hint="Opmerkingen" />
 
-    <Button
-        android:id="@+id/maak_button"
-        android:text="Maak practicum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="maak_practicum"/>
-
 </LinearLayout>

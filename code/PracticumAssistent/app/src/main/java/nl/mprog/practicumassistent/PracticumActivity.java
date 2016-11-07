@@ -2,10 +2,11 @@ package nl.mprog.practicumassistent;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class PracticumActivity extends Activity {
+public class PracticumActivity extends AppCompatActivity {
 
     ListView lstItems;
 

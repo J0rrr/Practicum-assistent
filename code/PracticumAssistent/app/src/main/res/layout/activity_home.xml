@@ -1,53 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="nl.mprog.practicumassistent.HomeActivity">
 
-    <Button
-        android:text="@string/nieuw_practicum"
+    <ListView
+        android:id="@+id/lv_practica"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btn_nieuw_practicum"
-        android:onClick="nieuw_practicum"/>
+        android:layout_height="match_parent"></ListView>
 
-    <Button
-        android:text="@string/bekijk_practica"
-        android:layout_width="match_parent"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_bekijk_practica"
-        android:layout_below="@+id/btn_nieuw_practicum" />
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_nieuw_practicum"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:onClick="fabClick"
+        app:layout_anchor="@id/lv_practica"
+        app:layout_anchorGravity="bottom|right|end"/>
 
-    <Button
-        android:text="@string/leerlingen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_bekijk_practica"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btn_leerlingen" />
-
-    <Button
-        android:text="Pas gebeurtenissen aan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_leerlingen"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btn_gebeurtenissen" />
-
-    <Button
-        android:text="@string/start_nieuwe_periode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_gebeurtenissen"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btn_start_nieuwe_periode" />
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
