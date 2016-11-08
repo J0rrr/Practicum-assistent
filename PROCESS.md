@@ -16,6 +16,6 @@ Veranderingen
 - Verder gegaan met implementeren
 - Thema vastgelegd (Light.darkactionbar, kleurenschema van Felisenum).
 
-## Dag 2
+## Dag 3
 - Verder gegaan met implementeren
 - Overgestapt op 'appcompat' (wat ik eigenlijk wilde vermijden), omdat de design library dat nodig heeft
