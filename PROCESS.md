@@ -12,10 +12,10 @@ Veranderingen
 - 'Functioneel beginnen', als HomeActivity geen scherm met knoppen, maar een overzicht met afgelopen practica, een FAB voor een nieuw practicum en een aantal menu-items naar de rest (Bekijk practica, Leerlingen, Nieuwe periode).
 - In NieuwPracticumActivity geen grote button met 'Maak practicum', maar een 'ga verder'-achtig knopje rechts boven in de titelbalk.
 
-## Dag 2
+## Dag 2 (wo 2 november)
 - Verder gegaan met implementeren
 - Thema vastgelegd (Light.darkactionbar, kleurenschema van Felisenum).
 
-## Dag 3
+## Dag 3 (ma 7 november)
 - Verder gegaan met implementeren
 - Overgestapt op 'appcompat' (wat ik eigenlijk wilde vermijden), omdat de design library dat nodig heeft
