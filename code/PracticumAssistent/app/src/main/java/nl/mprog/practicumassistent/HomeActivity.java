@@ -36,6 +36,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onClickLeerlingen(MenuItem mi) {
         // handle click here
+        Intent intent = new Intent(this, KlassenActivity.class);
+        startActivity(intent);
     }
     public void onClickNieuwPracticum(MenuItem mi) {
         // handle click here

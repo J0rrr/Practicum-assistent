@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="leeringen">
+    <string-array name="leerlingen">
         <item> Leerling 1 </item>
         <item> Leerling 2 </item>
         <item> Leerling 3 </item>

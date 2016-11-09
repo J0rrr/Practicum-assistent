@@ -1,8 +1,8 @@
 package nl.mprog.practicumassistent;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -25,6 +25,6 @@ public class PracticumActivity extends AppCompatActivity {
         // Vul de ListView
         lstItems = (ListView) findViewById(R.id.leerlingen_list);
         // TODO
-        lstItems.setAdapter(new ArrayAdapter<>(PracticumActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.leeringen)));
+        lstItems.setAdapter(new ArrayAdapter<>(PracticumActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.leerlingen)));
     }
 }

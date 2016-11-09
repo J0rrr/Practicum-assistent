@@ -16,7 +16,32 @@
             </intent-filter>
         </activity>
         <activity android:name=".NieuwPracticumActivity" />
-        <activity android:name=".PracticumActivity" />
+        <activity
+            android:name=".PracticumActivity"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nl.mprog.practicumassistent.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".KlassenActivity"
+            android:label="@string/title_activity_klassen"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nl.mprog.practicumassistent.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".LeerlingenActivity"
+            android:label="@string/title_activity_leerlingen"
+            android:parentActivityName=".KlassenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nl.mprog.practicumassistent.KlassenActivity" />
+        </activity>
     </application>
 
 </manifest>
