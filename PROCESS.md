@@ -5,17 +5,22 @@ Bestand waarin de totstandkoming van de app wordt bijgehouden op een dag-tot-dag
 ## Vooraf
 Proposal document gemaakt waarin beschreven staat welke functie de app moet vervullen en hoe de app er uit moet komen te zien (met afbeeldingen van de schermen).
 
-## Dag 1 (wo 26 oktober)
+## wo 26 oktober
 - Meeting met Martijn, goedkeuring, het programmeren mag beginnen.
 
 Veranderingen
 - 'Functioneel beginnen', als HomeActivity geen scherm met knoppen, maar een overzicht met afgelopen practica, een FAB voor een nieuw practicum en een aantal menu-items naar de rest (Bekijk practica, Leerlingen, Nieuwe periode).
 - In NieuwPracticumActivity geen grote button met 'Maak practicum', maar een 'ga verder'-achtig knopje rechts boven in de titelbalk.
 
-## Dag 2 (wo 2 november)
+## wo 2 november
 - Verder gegaan met implementeren
 - Thema vastgelegd (Light.darkactionbar, kleurenschema van Felisenum).
 
-## Dag 3 (ma 7 november)
+## ma 7 november
 - Verder gegaan met implementeren
 - Overgestapt op 'appcompat' (wat ik eigenlijk wilde vermijden), omdat de design library dat nodig heeft
+
+## di 8 november
+
+## wo 9 november
+- pop up windows geimplementeerd (begin)
