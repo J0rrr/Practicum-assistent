@@ -14,6 +14,8 @@ import android.widget.ListView;
 
 public class KlassenActivity extends AppCompatActivity {
 
+    DBHandler dbHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class KlassenActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Klassen");
+        dbHandler = new DBHandler(KlassenActivity.this, null, null, 1);
 
         // Vul de ListView met klassen
         ListView listView = (ListView) findViewById(R.id.listView);
@@ -33,6 +36,7 @@ public class KlassenActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
             }
         });
