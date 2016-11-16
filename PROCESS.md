@@ -24,3 +24,10 @@ Veranderingen
 
 ## wo 9 november
 - pop up windows geimplementeerd (begin)
+
+## di 15 november
+- begonnen aan database
+- overgestapt van pop up windows naar (alert)dialogs (begin)
+
+## wo 16 november
+- Verder gewerkt aan dialogs
