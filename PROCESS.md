@@ -31,3 +31,12 @@ Veranderingen
 
 ## wo 16 november
 - Verder gewerkt aan dialogs
+
+## za 19 november
+- dialogs afgemaakt
+
+## ma 5 december
+
+## di 6 december
+
+## wo 7 december
