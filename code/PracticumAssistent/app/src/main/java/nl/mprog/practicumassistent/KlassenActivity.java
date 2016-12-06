@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,9 +13,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class KlassenActivity extends AppCompatActivity {
+public class KlassenActivity extends AppCompatActivity implements AddLeerlingDialog.DialogListener {
 
-    DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,6 @@ public class KlassenActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Klassen");
-        dbHandler = new DBHandler(KlassenActivity.this, null, null, 1);
 
         // Vul de ListView met klassen
         ListView listView = (ListView) findViewById(R.id.listView);
@@ -36,10 +35,11 @@ public class KlassenActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                nieuweKlasDialog();
             }
         });
+
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -48,6 +48,23 @@ public class KlassenActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void nieuweKlasDialog(){
+        DialogFragment dialog = new AddKlasDialog();
+        dialog.show(getSupportFragmentManager(), "AddKlasDialog");
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        // User touched the dialog's positive button
+
+    }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        // User touched the dialog's negative button
+
     }
 
 

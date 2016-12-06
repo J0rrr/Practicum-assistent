@@ -1,13 +1,13 @@
 package nl.mprog.practicumassistent;
 
-public class Practica {
+public class Practicum {
 
     private int _id;
     private String _practicumnaam;
     private String _practicumdatum;
     private String _practicumopmerking;
 
-    public Practica(String naam, String datum, String opmerking){
+    public Practicum(String naam, String datum, String opmerking){
         this._practicumnaam = naam;
         this._practicumdatum = datum;
         this._practicumopmerking = opmerking;
