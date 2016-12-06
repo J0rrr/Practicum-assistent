@@ -16,11 +16,14 @@ public class HomeActivity extends AppCompatActivity {
     //private Toolbar toolbar;
 
     ListView lstItems;
+    DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        dbHandler = new DBHandler(this);
 
         // Vul de ListView
         lstItems = (ListView) findViewById(R.id.lv_practica);

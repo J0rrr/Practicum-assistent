@@ -1,14 +1,18 @@
 package nl.mprog.practicumassistent;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class PracticumActivity extends AppCompatActivity {
+public class PracticumActivity extends AppCompatActivity implements AddGebeurtenisDialog.DialogListener{
 
-    ListView lstItems;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +27,33 @@ public class PracticumActivity extends AppCompatActivity {
 
 
         // Vul de ListView
-        lstItems = (ListView) findViewById(R.id.leerlingen_list);
+        listView = (ListView) findViewById(R.id.leerlingen_list);
         // TODO
-        lstItems.setAdapter(new ArrayAdapter<>(PracticumActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.leerlingen)));
+        listView.setAdapter(new ArrayAdapter<>(PracticumActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.leerlingen)));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                nieuweGebeurtenisDialog();
+            }
+        });
+
+    }
+
+    public void nieuweGebeurtenisDialog(){
+        DialogFragment dialog = new AddGebeurtenisDialog();
+        dialog.show(getSupportFragmentManager(), "AddGebeurtenisDialog");
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        // User touched the dialog's positive button
+
+    }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        // User touched the dialog's negative button
+
     }
 }

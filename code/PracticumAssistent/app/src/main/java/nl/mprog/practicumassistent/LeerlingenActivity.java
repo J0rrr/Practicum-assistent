@@ -32,13 +32,13 @@ public class LeerlingenActivity extends AppCompatActivity implements AddLeerling
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                niuweLeerlingDialog();
+                nieuweLeerlingDialog();
             }
         });
 
     }
 
-    public void niuweLeerlingDialog(){
+    public void nieuweLeerlingDialog(){
         DialogFragment dialog = new AddLeerlingDialog();
         dialog.show(getSupportFragmentManager(), "AddLeerlingDialog");
     }
