@@ -11,13 +11,21 @@ public class DBHandler extends SQLiteOpenHelper {
 
     SQLiteDatabase db;
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "practicumassistent.db";
-    public static final String TABLE_KLAS = "testklas";
+    public static final String TABLE_LEERLINGEN = "Leerlingen";
+    public static final String TABLE_KLASSEN = "klassen";
+    public static final String TABLE_GEBEURTENISSEN = "Gebeurtenissen";
     public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_PRACTICUM_NAAM = "Naam practicum";
-    public static final String COLUMN_PRACTICUM_DATUM = "Datum practicum";
-    public static final String COLUMN_PRACTICUM_OPMERKINGEN = "Opmerkingen practicum";
+    public static final String COLUMN_KLAS = "Klas";
+    public static final String COLUMN_LEERLING_NAAM = "Naam";
+    public static final String COLUMN_PRACTICUM_NAAM = "Practicum_naam";
+    public static final String COLUMN_PRACTICUM_OPMERKINGEN = "Practicum_opmerkingen";
+    public static final String COLUMN_DATUM = "Datum";
+    public static final String COLUMN_GEBEURTENIS_NAAM = "Gebeurtenis_naam";
+    public static final String COLUMN_GEBEURTENIS_WAARDE = "Gebeurtenis_waarde";
+
+
 
 
     public DBHandler(Context context) {
@@ -27,47 +35,64 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_KLAS + "(" +
+        db.execSQL("CREATE TABLE " + TABLE_KLASSEN + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_PRACTICUM_NAAM + " TEXT, " +
-                COLUMN_PRACTICUM_DATUM + " TEXT, " +
-                COLUMN_PRACTICUM_OPMERKINGEN + " TEXT " +
+                COLUMN_KLAS + " TEXT " +
                 ");");
-        db.close();
-    }
 
-    public void createTable(String klas){
-        db = this.getWritableDatabase();
-        db.execSQL("CREATE TABLE " + klas + "(" +
+        db.execSQL("CREATE TABLE " + TABLE_LEERLINGEN + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_PRACTICUM_NAAM + " TEXT, " +
-                COLUMN_PRACTICUM_DATUM + " TEXT, " +
-                COLUMN_PRACTICUM_OPMERKINGEN + " TEXT " +
+                COLUMN_KLAS + " TEXT, " +
+                COLUMN_LEERLING_NAAM + " TEXT " +
                 ");");
-        db.close();
+
+        db.execSQL("CREATE TABLE " + TABLE_GEBEURTENISSEN + "(" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_KLAS + " TEXT, " +
+                COLUMN_LEERLING_NAAM + " TEXT, " +
+                COLUMN_DATUM + " TEXT, " +
+                COLUMN_PRACTICUM_NAAM + " TEXT, " +
+                COLUMN_PRACTICUM_OPMERKINGEN + " TEXT, " +
+                COLUMN_GEBEURTENIS_NAAM + " TEXT, " +
+                COLUMN_GEBEURTENIS_WAARDE + "TEXT " +
+                ");");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_LEERLINGEN);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_GEBEURTENISSEN);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_KLASSEN);
+        onCreate(db);
     }
 
 
-    // Voeg een practicum toe aan de database
-    public void addPracticum(Practicum practicum){
+    // Voeg een Klas toe aan de database
+    public void addKlas(String klas){
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PRACTICUM_NAAM, practicum.get_practicumnaam());
-        values.put(COLUMN_PRACTICUM_DATUM, practicum.get_practicumdatum());
-        values.put(COLUMN_PRACTICUM_OPMERKINGEN, practicum.get_practicumopmerking());
+        values.put(COLUMN_KLAS, klas);
         SQLiteDatabase db = getWritableDatabase();
-        db.insert(TABLE_KLAS, null, values);
+        db.insert(TABLE_KLASSEN, null, values);
         db.close();
     }
 
-    // Verwijder een practicum uit de database ZOU HEEL GOED NIET KUNNEN WERKEN, ZIE THENEWBOSTON 52
-    public void deletePracticum(Practicum practicum){
+    // Voeg een leerling toe aan de database
+    public void addLeerling(String klas, String naam){
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_KLAS, klas);
+        values.put(COLUMN_LEERLING_NAAM, naam);
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_KLAS + " WHERE " + COLUMN_PRACTICUM_NAAM + " =\"" + practicum.get_practicumnaam() + "\";");
+        db.insert(TABLE_LEERLINGEN, null, values);
+        db.close();
+    }
+
+
+    // Verwijder een leerling uit de database ZOU HEEL GOED NIET KUNNEN WERKEN, ZIE THENEWBOSTON 52
+    public void deleteLeerling(String klas, String naam){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_LEERLINGEN +
+                " WHERE " + COLUMN_KLAS + " =\"" + klas + "\"" +
+                " AND " + COLUMN_LEERLING_NAAM + "=\"" + naam + "\";");
     }
 
 }

@@ -37,6 +37,7 @@ public class AddKlasDialog  extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Get the layout inflater
         LayoutInflater inflater = getActivity().getLayoutInflater();
+        dbHandler = new DBHandler(getActivity());
 
 
         // Inflate and set the layout for the dialog
@@ -45,22 +46,26 @@ public class AddKlasDialog  extends DialogFragment {
         builder.setView(layout);
         final EditText editText = (EditText)layout.findViewById(R.id.klas);
         builder.setTitle("Nieuwe klas")
-                // Add action buttons
+                // Stel de 'bevestigen' knop in
                 .setPositiveButton("Bevestigen", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
+
+                        // Lees het veld in en controleer of er wel iets in ingevoerd
                         String klas = editText.getText().toString();
-                        // TODO haal toast weg
-                        Toast.makeText(getActivity(), klas, Toast.LENGTH_SHORT).show();
+                        if (klas.equals("")){
+                            Toast.makeText(getActivity(), "Voer een klas in!", Toast.LENGTH_SHORT).show();
+                        }
 
-                        // maak een nieuwe tabel in de database
-                        dbHandler.createTable(klas);
-
-
-
-
+                        // Voeg de nieuwe klas toe aan de database
+                        else {
+                            dbHandler.addKlas(klas);
+                            Toast.makeText(getActivity(), klas, Toast.LENGTH_SHORT).show();
+                        }
                     }
                 })
+
+                // Stel de 'annuleren' knop in
                 .setNegativeButton("Annuleren", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(getActivity(), "TESTN!", Toast.LENGTH_SHORT).show();
