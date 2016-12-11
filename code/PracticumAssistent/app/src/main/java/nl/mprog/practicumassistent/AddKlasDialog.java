@@ -15,7 +15,7 @@ public class AddKlasDialog  extends DialogFragment {
 
     // Use this instance of the interface to deliver action events
     AddLeerlingDialog.DialogListener mListener;
-    DBHandler dbHandler;
+    DBAdapter dbAdapter;
 
     // Override the Fragment.onAttach() method to instantiate the NoticeDialogListener
     @Override
@@ -37,7 +37,8 @@ public class AddKlasDialog  extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Get the layout inflater
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        dbHandler = new DBHandler(getActivity());
+
+
 
 
         // Inflate and set the layout for the dialog
@@ -59,7 +60,11 @@ public class AddKlasDialog  extends DialogFragment {
 
                         // Voeg de nieuwe klas toe aan de database
                         else {
-                            dbHandler.addKlas(klas);
+                            // Open de database connectie
+                            dbAdapter = new DBAdapter(getActivity());
+                            dbAdapter.open();
+                            dbAdapter.addKlas(klas);
+                            dbAdapter.close();
                             Toast.makeText(getActivity(), klas, Toast.LENGTH_SHORT).show();
                         }
                     }

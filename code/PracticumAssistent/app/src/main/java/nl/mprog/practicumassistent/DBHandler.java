@@ -2,14 +2,13 @@ package nl.mprog.practicumassistent;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
+/*
 
 public class DBHandler extends SQLiteOpenHelper {
-
-    SQLiteDatabase db;
 
     private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "practicumassistent.db";
@@ -25,27 +24,30 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_GEBEURTENIS_NAAM = "Gebeurtenis_naam";
     public static final String COLUMN_GEBEURTENIS_WAARDE = "Gebeurtenis_waarde";
 
-
+    private DatabaseHelper myDBHandler;
+    private SQLiteDatabase db;
 
 
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        SQLiteDatabase db = this.getWritableDatabase();
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // maak tabel met klassen
         db.execSQL("CREATE TABLE " + TABLE_KLASSEN + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_KLAS + " TEXT " +
                 ");");
 
+        // maak tabel met leerlingen
         db.execSQL("CREATE TABLE " + TABLE_LEERLINGEN + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_KLAS + " TEXT, " +
                 COLUMN_LEERLING_NAAM + " TEXT " +
                 ");");
 
+        // maak tabel met gebeurtenissen
         db.execSQL("CREATE TABLE " + TABLE_GEBEURTENISSEN + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_KLAS + " TEXT, " +
@@ -64,6 +66,33 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_GEBEURTENISSEN);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_KLASSEN);
         onCreate(db);
+    }
+
+    public DBHandler open() {
+        db = myDBHandler.getWritableDatabase();
+        return this;
+    }
+
+    public void close(){
+        myDBHandler.close();
+    }
+
+    // return alle rijen uit de klassen database
+    public Cursor getKlassenRows(){
+        String table = TABLE_KLASSEN;
+        String[] Columns = null; // geen selectie wil zeggen: alle columns
+        String selection = null;
+        String[] selectionArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = COLUMN_KLAS + " ASC";
+        String limit = null;
+        Cursor c = db.query(true, table, Columns, selection, selectionArgs, groupBy, having, orderBy, limit);
+
+        if (c != null) {
+            c.moveToFirst();
+        }
+        return c;
     }
 
 
@@ -96,3 +125,4 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
 }
+*/
