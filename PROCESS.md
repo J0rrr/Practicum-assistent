@@ -31,6 +31,7 @@ Veranderingen
 
 ## wo 16 november
 - Verder gewerkt aan dialogs
+- geklooi aan dialogfragments
 
 ## za 19 november
 - dialogs afgemaakt
@@ -40,3 +41,9 @@ Veranderingen
 ## di 6 december
 
 ## wo 7 december
+
+## zo 11 december
+- toch andere databaseAdapter gemaakt
+- het toevoegen van klassen aan de database geïmplementeerd
+- het weergeven van klassen in de listview geïmplementeerd
+
