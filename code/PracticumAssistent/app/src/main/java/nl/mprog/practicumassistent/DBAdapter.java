@@ -23,26 +23,6 @@ public class DBAdapter {
 	public static final String COLUMN_GEBEURTENIS_NAAM = "Gebeurtenis_naam";
 	public static final String COLUMN_GEBEURTENIS_WAARDE = "Gebeurtenis_waarde";
 
-	/*
-	// Field Names:
-	public static final String KEY_ROWID = "_id";
-	public static final String KEY_TASK = "task";
-	public static final String KEY_DATE = "date";
-	
-	public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_TASK, KEY_DATE};
-	
-	// Column Numbers for each Field Name:
-	public static final int COL_ROWID = 0;
-	public static final int COL_TASK = 1;
-	public static final int COL_DATE = 2;
-
-	// DataBase info:
-	public static final String DATABASE_NAME = "dbToDo";
-	public static final String DATABASE_TABLE = "mainToDo";
-	public static final int DATABASE_VERSION = 2; // The version number must be incremented each time a change to DB structure occurs.
-		
-	*/
-
 	private final Context context;
 	private DatabaseHelper myDBHelper;
 	private SQLiteDatabase db;

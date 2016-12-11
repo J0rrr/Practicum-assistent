@@ -1,21 +1,19 @@
 package nl.mprog.practicumassistent;
 
-import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class KlassenActivity extends AppCompatActivity implements AddLeerlingDialog.DialogListener {
+public class KlassenActivity extends AppCompatActivity implements DialogInterface.OnDismissListener{
 
     DBAdapter dbAdapter;
 
@@ -50,25 +48,22 @@ public class KlassenActivity extends AppCompatActivity implements AddLeerlingDia
         dbAdapter.close();
     }
 
+
+
     public void nieuweKlasDialog(){
         DialogFragment dialog = new AddKlasDialog();
         dialog.show(getSupportFragmentManager(), "AddKlasDialog");
     }
 
+    // wordt aangeroepen als er op 'bevestigen' van de dialog wordt gedrukt
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
-        // User touched the dialog's positive button
-
+    public void onDismiss(final DialogInterface dialog) {
+        // Vul de listview opnieuw (met de nieuwe data)
+        populateListView();
     }
 
-    @Override
-    public void onDialogNegativeClick(DialogFragment dialog) {
-        // User touched the dialog's negative button
-
-    }
-
-
-    private void populateListView() {
+    // Vult de listview met data (de klassen) uit de database
+    public void populateListView() {
         Cursor cursor = dbAdapter.getKlassenRows();
 
         String[] fromFieldNames = new String[]
