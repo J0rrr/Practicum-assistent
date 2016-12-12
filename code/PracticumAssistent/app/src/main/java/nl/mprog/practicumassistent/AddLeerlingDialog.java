@@ -12,32 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-public class AddLeerlingDialog extends DialogFragment{
+public class AddLeerlingDialog extends DialogFragment {
 
-    public interface DialogListener {
-        public void onDialogPositiveClick(DialogFragment dialog);
-        public void onDialogNegativeClick(DialogFragment dialog);
-    }
-
-    // Use this instance of the interface to deliver action events
-    DialogListener mListener;
-
-    // Override the Fragment.onAttach() method to instantiate the NoticeDialogListener
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        // Verify that the host activity implements the callback interface
-        try {
-            // Instantiate the NoticeDialogListener so we can send events to the host
-            mListener = (DialogListener) activity;
-        } catch (ClassCastException e) {
-            // The activity doesn't implement the interface, throw exception
-            throw new ClassCastException(activity.toString()
-                    + " must implement NoticeDialogListener");
-        }
-    }
+    DBAdapter dbAdapter;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -47,18 +27,38 @@ public class AddLeerlingDialog extends DialogFragment{
 
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        builder.setView(inflater.inflate(R.layout.dialog_add_leerling, null));
+        View layout = inflater.inflate(R.layout.dialog_add_leerling, null);
+        builder.setView(layout);
+        final EditText editText = (EditText)layout.findViewById(R.id.editText);
         builder.setTitle("Nieuwe leerling")
                 // Add action buttons
-                .setPositiveButton("Bevestigen", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Toevoegen", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getActivity(), "Positive!", Toast.LENGTH_SHORT).show();
+                        // Lees het veld in en controleer of er wel iets in ingevoerd
+                        String leerling = editText.getText().toString();
+                        if (leerling.equals("")){
+                            Toast.makeText(getActivity(), "Voer een klas in!", Toast.LENGTH_SHORT).show();
+                        }
+
+                        // Voeg de nieuwe leerling toe aan de database
+                        else {
+                            // Voeg de leerling toe aan de database
+//                            dbAdapter = new DBAdapter(getActivity());
+//                            dbAdapter.open();
+//                            dbAdapter.addLeerling(LeerlingenActivity.klas , leerling);
+//                            dbAdapter.close();
+
+                            // Geef aan LeerlingenActivity door dat de dialog klaar is
+                            if (getActivity() instanceof DialogInterface.OnDismissListener) {
+                                ((DialogInterface.OnDismissListener) getActivity()).onDismiss(dialog);
+                            }
+                        }
                     }
                 })
+
                 .setNegativeButton("Annuleren", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getActivity(), "Negative!", Toast.LENGTH_SHORT).show();
                     }
                 });
         return builder.create();

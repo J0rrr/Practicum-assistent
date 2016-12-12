@@ -13,8 +13,6 @@ import android.widget.Toast;
 
 public class AddKlasDialog  extends DialogFragment {
 
-    // Use this instance of the interface to deliver action events
-    AddLeerlingDialog.DialogListener mListener;
     DBAdapter dbAdapter;
 
     @Override
@@ -27,10 +25,10 @@ public class AddKlasDialog  extends DialogFragment {
         // Pass null as the parent view because its going in the dialog layout
         View layout = inflater.inflate(R.layout.dialog_add_klas, null);
         builder.setView(layout);
-        final EditText editText = (EditText)layout.findViewById(R.id.klas);
+        final EditText editText = (EditText)layout.findViewById(R.id.editText);
         builder.setTitle("Nieuwe klas")
                 // Stel de 'bevestigen' knop in
-                .setPositiveButton("Bevestigen", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Toevoegen", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
 

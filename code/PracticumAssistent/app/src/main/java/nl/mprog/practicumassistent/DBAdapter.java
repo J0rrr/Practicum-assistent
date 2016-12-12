@@ -1,3 +1,7 @@
+//
+// Code sterk geïnspireerd door een tuturial van 'Lecture Snippets'.
+// https://www.youtube.com/watch?v=c-7sW6UJHw0 TODO goede referentie maken
+//
 package nl.mprog.practicumassistent;
 
 import android.content.ContentValues;
@@ -5,7 +9,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class DBAdapter {
 
@@ -89,18 +92,50 @@ public class DBAdapter {
 		return c;
 	}
 
-	/*
-	// Get a specific row (by rowId)
-	public Cursor getRow(long rowId) {
-		String where = KEY_ROWID + "=" + rowId;
-		Cursor c = 	db.query(true, DATABASE_TABLE, ALL_KEYS, 
-						where, null, null, null, null, null);
+	// return alle rijen uit de klassen database
+	public Cursor getLeerlingenRows(){
+		String table = TABLE_LEERLINGEN;
+		String[] Columns = null; // geen selectie wil zeggen: alle columns
+		String selection = null;
+		String[] selectionArgs = null;
+		String groupBy = null;
+		String having = null;
+		String orderBy = COLUMN_LEERLING_NAAM + " ASC";
+		String limit = null;
+		Cursor c = db.query(true, table, Columns, selection, selectionArgs, groupBy, having, orderBy, limit);
+
 		if (c != null) {
 			c.moveToFirst();
 		}
 		return c;
 	}
-	
+
+
+	// Get a specific row (by rowId)
+	public String getKlas(long rowId) {
+		String selection = COLUMN_ID + "=" + rowId;
+		Cursor cursor = 	db.query(true, TABLE_KLASSEN, null,
+						selection, null, null, null, null, null);
+		if (cursor.moveToFirst()){
+			return cursor.getString(cursor.getColumnIndex(COLUMN_KLAS));
+		}
+		return null;
+	}
+
+	/*
+
+
+		// Get a specific row (by rowId)
+	public Cursor getRow(String table, long rowId) {
+		String selection = COLUMN_ID + "=" + rowId;
+		Cursor c = 	db.query(true, table, null,
+						selection, null, null, null, null, null);
+		if (c != null) {
+			c.moveToFirst();
+		}
+		return c;
+	}
+
 	// Change an existing row to be equal to new data.
 	public boolean updateRow(long rowId, String task, String date) {
 		String where = KEY_ROWID + "=" + rowId;
@@ -154,7 +189,5 @@ public class DBAdapter {
 			onCreate(db);
 		}
 	}
-
-
 }
 
