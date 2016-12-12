@@ -27,6 +27,7 @@ public class NieuwPracticumActivity extends AppCompatActivity implements Adapter
         setTitle("Nieuw Practicum");
 
         //getSupportActionBar().setHomeButtonEnabled(true);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         practicum_naam = (EditText) findViewById(R.id.practicum_naam);
