@@ -8,7 +8,7 @@
     tools:context="nl.mprog.practicumassistent.HomeActivity">
 
     <ListView
-        android:id="@+id/lv_practica"
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
@@ -22,7 +22,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:onClick="fabClick"
-        app:layout_anchor="@id/lv_practica"
+        app:layout_anchor="@id/listView"
         app:layout_anchorGravity="bottom|right|end"/>
 
 </android.support.design.widget.CoordinatorLayout>

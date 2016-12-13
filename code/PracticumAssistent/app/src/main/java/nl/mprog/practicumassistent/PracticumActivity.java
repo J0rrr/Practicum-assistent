@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class PracticumActivity extends AppCompatActivity implements AddGebeurtenisDialog.DialogListener{
 
@@ -19,11 +20,12 @@ public class PracticumActivity extends AppCompatActivity implements AddGebeurten
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practicum);
 
-        // Maak de titel en geef het weer( klas + naam van practicum)
+        // Maak de titel en geef het weer (klas + naam van practicum)
         Bundle titleData = getIntent().getExtras();
-        String practicum_klas = titleData.getString("practicum_klas");
-        String practicum_naam = titleData.getString("practicum_naam");
-        setTitle(practicum_klas + " - " + practicum_naam);
+        String klas = titleData.getString("klas");
+        String naam = titleData.getString("naam");
+        Toast.makeText(this, klas, Toast.LENGTH_SHORT).show();
+        setTitle(klas + " - " + naam);
 
 
         // Vul de ListView

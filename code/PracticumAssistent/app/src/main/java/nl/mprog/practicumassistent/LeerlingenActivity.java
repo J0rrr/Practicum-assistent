@@ -51,7 +51,13 @@ public class LeerlingenActivity extends AppCompatActivity{
                 addLeerlingDialog();
             }
         });
+    }
 
+    // Sluit de database connectie als de activity wordt gesloopt (onDestroy)
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        dbAdapter.close();
     }
 
     public void addLeerlingDialog(){
@@ -67,13 +73,14 @@ public class LeerlingenActivity extends AppCompatActivity{
                 // Lees het veld in en controleer of er wel iets in ingevoerd
                 String leerling = editText.getText().toString();
                 if (leerling.equals("")){
-                    Toast.makeText(LeerlingenActivity.this, "Voer een klas in!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LeerlingenActivity.this, "Voer een naam in!", Toast.LENGTH_SHORT).show();
                 }
-
-                // Voeg de nieuwe klas toe aan de database
-                else {
-                    dbAdapter.addLeerling(klas, leerling);
+                // Voeg de nieuwe leerling toe aan de database
+                else if (dbAdapter.addLeerling(klas, leerling)){
                     populateListView();
+                }
+                else{
+                    Toast.makeText(LeerlingenActivity.this, "Leerling bestaat al!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -87,10 +94,10 @@ public class LeerlingenActivity extends AppCompatActivity{
 
     // Vult de listview met data (de klassen) uit de database
     public void populateListView() {
-        Cursor cursor = dbAdapter.getLeerlingenRows();
+        Cursor cursor = dbAdapter.getLeerlingen(klas);
 
         String[] fromFieldNames = new String[]
-                {DBAdapter.COLUMN_LEERLING_NAAM};
+                {DBAdapter.COLUMN_NAAM};
 
         int[] toViewIDs = new int[]
                 {android.R.id.text1};

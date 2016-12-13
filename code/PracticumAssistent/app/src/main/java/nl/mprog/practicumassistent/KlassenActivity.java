@@ -71,11 +71,12 @@ public class KlassenActivity extends AppCompatActivity{
                 if (klas.equals("")){
                     Toast.makeText(KlassenActivity.this, "Voer een klas in!", Toast.LENGTH_SHORT).show();
                 }
-
                 // Voeg de nieuwe klas toe aan de database
-                else {
-                    dbAdapter.addKlas(klas);
+                else if (dbAdapter.addKlas(klas)){
                     populateListView();
+                }
+                else{
+                    Toast.makeText(KlassenActivity.this, "Klas bestaat al!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -89,7 +90,7 @@ public class KlassenActivity extends AppCompatActivity{
 
     // Vult de listview met data (de klassen) uit de database
     public void populateListView() {
-        Cursor cursor = dbAdapter.getKlassenRows();
+        Cursor cursor = dbAdapter.getKlassen();
 
         String[] fromFieldNames = new String[]
                 {DBAdapter.COLUMN_KLAS};

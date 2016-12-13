@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/opmerking_editText"
+        android:id="@+id/practicum_opmerkingen"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:inputType="textMultiLine"
